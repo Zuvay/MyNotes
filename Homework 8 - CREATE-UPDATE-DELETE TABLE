@@ -21,7 +21,7 @@ SET name = 'ImTheFirstGuy'
 WHERE id = 1;
 
 UPDATE employee
-SET id = 23
+SET id = 23 --aslında burada yanlışlık var. id SERIAL yapıda olduğu için değişmezdir. Bu hayatı hatırlamak için kalsın burada bu.
 WHERE name = 'Wald Caig';
 
 UPDATE employee
