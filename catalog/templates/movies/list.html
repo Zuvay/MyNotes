@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Merhaba, Dünya!</h1>
+        <p class="lead">Bunun home sayfasından farkı burdaki filmleri database'den geliyo. Homedakiler sabit. Admin sayfasından yüklendikçe buraya eklenecek.</p>
+        <hr class="my-4">
+        <p>Alttaki buton çalışmıyo ona göre.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Daha Fazla</a>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+
+        {% if movies %}
+            {% for movie in movies %}
+                <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="card-img" src="{% static movie.get_image_path %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="card-title"> 
+                                <a href="{% url 'detail' movie.id %}"> {{ movie.name }}</a>
+                             </div>
+                            <p class="card-text">
+                                    {{ movie.description }} 
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">{{ movie.created_date | timesince }}</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            {% endfor %}
+
+        {% else %}
+            <div class="alert alert-warning">
+                <p>
+                    No Movies
+                </p>
+            </div>
+        {% endif %}      
+     
+    </div>
+</div>
+{% endblock %}

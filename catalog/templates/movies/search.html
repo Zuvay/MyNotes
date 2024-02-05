@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Merhaba, Dünya!</h1>
+            <p class="lead">Movies sayfası için.</p>
+            <hr class="my-4">
+            <p>Alttaki buton çalışmıyo ona göre.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Daha Fazla</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="card-img" src="{% static 'img/1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="card-title">Film 1</div>
+                            <p class="card-text">Film 1 Açıklama</p>
+                            <p class="card-text">
+                                <small class="text-muted">3 gün önce</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="card-img" src="{% static 'img/2.jpg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="card-title">Film 2</div>
+                            <p class="card-text">Film 2 Açıklama</p>
+                            <p class="card-text">
+                                <small class="text-muted">3 gün önce</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="card-img" src="{% static 'img/3.jpg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="card-title">Film 3</div>
+                            <p class="card-text">Film 3 Açıklama</p>
+                            <p class="card-text">
+                                <small class="text-muted">3 gün önce</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
