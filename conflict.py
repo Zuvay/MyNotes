@@ -1,0 +1,1 @@
+br="burada conflict yapcaz şimdi. bad isimli bir branch oluşturdum bunu da oraya kaydediyorum."
