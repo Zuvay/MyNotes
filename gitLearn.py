@@ -15,3 +15,9 @@ bu zula dosyada görünmez. git stash list yaparsak stashlediğimiz kodları gö
 Bu kodları çıkarmak istediğimizde git stash pop yaparak ilgili dosyaya geri dönmesini sağlayabiliriz. 
 """
 
+"""
+İlgili klasördeki komutları main isimli branche yükledik
+$ git remote add origin https://github.com/Zuvay/Patika.dev-BTKHomeworks.git
+$ git branch -M main
+$ git push -u origin main
+"""
