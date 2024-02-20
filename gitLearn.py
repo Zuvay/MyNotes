@@ -15,3 +15,12 @@ bu zula dosyada görünmez. git stash list yaparsak stashlediğimiz kodları gö
 Bu kodları çıkarmak istediğimizde git stash pop yaparak ilgili dosyaya geri dönmesini sağlayabiliriz. 
 """
 
+"""
+git checkout (ilgili log kodu) komutu ile oradaki duruma döneriz ama o zaman bi karar vermemiz gerekir çünkü head hala son committe olacak. head ile master ayrılır.
+git reset (ilgili log kodu) yaparsak ise ilgili commite geri döneriz. Ama yazdığımız değişiklikler kalır
+git reset --hard (ilgili log kodu) yaparsak ise yine geri döneriz ve geridekiler silinir.
+git diff komutu ile yapılan değişiklikleri görebiliyoruz
+git rebase komutu oldukça riskli bir komut. Çok fazla merge commit olması istenmediği durumlarda branchlerdeki commitleri arka arkaya sıralıyor. Yanlış kullanımda projeyi mahvedebilir.
+Rebase işlemi, varolan bir dalın son commit'lerini alır ve başka bir dalın en son durumuna uygular, böylece dalların birbirine entegrasyonunu sağlar.
+
+"""
