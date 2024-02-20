@@ -16,6 +16,7 @@ Bu kodları çıkarmak istediğimizde git stash pop yaparak ilgili dosyaya geri 
 """
 
 """
+<<<<<<< HEAD
 git checkout (ilgili log kodu) komutu ile oradaki duruma döneriz ama o zaman bi karar vermemiz gerekir çünkü head hala son committe olacak. head ile master ayrılır.
 git reset (ilgili log kodu) yaparsak ise ilgili commite geri döneriz. Ama yazdığımız değişiklikler kalır
 git reset --hard (ilgili log kodu) yaparsak ise yine geri döneriz ve geridekiler silinir.
@@ -24,3 +25,10 @@ git rebase komutu oldukça riskli bir komut. Çok fazla merge commit olması ist
 Rebase işlemi, varolan bir dalın son commit'lerini alır ve başka bir dalın en son durumuna uygular, böylece dalların birbirine entegrasyonunu sağlar.
 
 """
+=======
+İlgili klasördeki komutları main isimli branche yükledik
+$ git remote add origin https://github.com/Zuvay/Patika.dev-BTKHomeworks.git
+$ git branch -M main
+$ git push -u origin main
+"""
+>>>>>>> 36831c7a223be8fa0bf80ce25abbb4db9428a66e
