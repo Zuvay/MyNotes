@@ -9,6 +9,7 @@ Bir class'ın içinde başka bir class açmak. inherit gibi değil. Nesne oluşt
 
 Abstract Class:
 class oluştururken önüne abstract yazılarak oluşturuluyo. Bu class'a doğrudan erişemiyosun. Bi subclass açıp bu class'a inherit ediceksin. Ondan sonra subclass için nesne oluşturduğunda bu superclass'a(yani abstract class'a) erişebiliyosun. aynı şekilde abstract metotlar da oluşturabiliyon.
+eğer abstract classın içinde abstract bir metotun varsa onu inherit edilen classlarda override etmen gerekir. Eğer etmezsen hata alırsın. Abstract metot inherit edilen classlarda tanımlanmalı.
 
 Interface:
 Class gibi ama daha havalısı. Interface tanımlanıyo, altında da metotları tanımlanıyo. Sonra bu interface'i implement eden classlar tanımlıyorsun. Interface'de tanımladığın metotlara burada gövde ekliyorsun. Ulaşmak istersen de interface için gövdesini oluşturduğun class için nesne oluşturup çağırabiliyosun. Örnek verelim:
