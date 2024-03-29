@@ -15,6 +15,7 @@ public class DeleteQuery {
             connection = helper.getConnection();
             String sql = "DELETE FROM dictionary.dict_table_new where id=?;";
             statement = connection.prepareStatement(sql);
+            //1. index için 740 verisi. sql sorgusundaki ilk ? için 740 girilecek demek oluyor. 
             statement.setInt(1,740);
             statement.executeUpdate();
             System.out.println("Kayıt Silindi");
