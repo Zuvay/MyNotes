@@ -15,6 +15,7 @@ public class InsertQuery {
             connection = helper.getConnection();
             String sql = "INSERT INTO `dictionary`.`dict_table_new` (t_words,e_words) VALUES (?,?)";
             statement = connection.prepareStatement(sql);
+            //her bir index sql string'indeki soru işaretine denk geliyor. İlk soru işareti için kara elf ikincisi için drow yerleştirilecek.
             statement.setString(1,"kara elf");
             statement.setString(2,"drow");
             statement.executeUpdate();
