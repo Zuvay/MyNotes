@@ -45,12 +45,5 @@ public class WordQuiz extends JFrame{
            buttons[i].setText(variables[i]);
         }
 
-
-//        button1.setText(turkish);
-//        button2.setText(englishOne);
-//        button3.setText(englishTwo);
-//        button4.setText(englishThree);
-
-
     }
 }
