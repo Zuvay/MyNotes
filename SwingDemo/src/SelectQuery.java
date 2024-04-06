@@ -47,6 +47,7 @@ public class SelectQuery {
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery("SELECT e_words FROM dict_table_new ORDER BY RAND() LIMIT 3")) {
 
+            //ingilizce kelimelerin tutulacağı liste
             ArrayList<String> englishWordsList = new ArrayList<>();
             int count = 0;
             while (resultSet.next() && count < 3) {
@@ -54,6 +55,7 @@ public class SelectQuery {
                 count++;
             }
 
+            //değişkenleri atama işi
             if (englishWordsList.size() >= 3) {
                 englishOne = englishWordsList.get(0);
                 englishTwo = englishWordsList.get(1);
