@@ -13,7 +13,7 @@ public class SwDemo extends JFrame{
         setTitle("İlk Swing denemesi");
         String sql = "SELECT t_words, e_words FROM new_table ORDER BY RAND() LIMIT 5";
 
-
+//Deneme
         btnMessage.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
