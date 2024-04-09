@@ -15,7 +15,7 @@ public class Main {
                     throw new RuntimeException(e);
                 }
                 wordQuiz.setVisible(true);
-                wordQuiz.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                wordQuiz.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }
         });
 
