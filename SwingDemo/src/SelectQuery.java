@@ -62,7 +62,6 @@ public class SelectQuery {
                 throw new SQLException("Yeterli sayıda İngilizce kelime bulunamadı.");
             }
         } catch (SQLException exception) {
-            // SQLException'ı daha anlamlı bir şekilde işleyin veya iletişim kutuları gibi bir kullanıcı arabirimiyle kullanıcıya geri bildirim sağlayın
             dbHelper.showErrorException(exception);
         }
     }
