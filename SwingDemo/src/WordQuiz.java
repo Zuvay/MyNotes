@@ -90,7 +90,7 @@ public class WordQuiz extends JFrame{
         List<String> variableList = Arrays.asList(variables);
         Collections.shuffle(variableList);
 
-        //atamayı yap
+        //atamayı yap.
         questionLabel.setText(turkish);
         for (int i = 0; i < buttons.length; i++) {
             buttons[i].setText(variables[i]);
