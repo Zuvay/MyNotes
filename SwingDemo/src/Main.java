@@ -8,18 +8,13 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                WordQuiz wordQuiz = null;
-                try {
-                    wordQuiz = new WordQuiz();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-                wordQuiz.setVisible(true);
-                wordQuiz.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                MainMenu mainMenu = null;
+                mainMenu = new MainMenu();
+                mainMenu.setVisible(true); //menüyü görünür yap
+                mainMenu.setLocationRelativeTo(null); //menüyü tam merkezde aç
+                mainMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //çarpı tuşuyla uygulamayı bitir
             }
         });
-
-
 
     }
 }

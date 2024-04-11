@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class WordQuiz extends JFrame{
+public class MistakesWordQuiz extends JFrame{
     private JPanel QuizPanel;
     private JButton button1;
     private JButton button2;
@@ -22,18 +22,18 @@ public class WordQuiz extends JFrame{
     private int streak=0;
 
 
-    WordQuiz() throws SQLException {
+    MistakesWordQuiz() throws SQLException {
         add(QuizPanel);
         setSize(600, 500);
         setTitle("WordQuiz");
 
-        getQuestion(); //Soruları getiren method.
+        getQuestion(); //Sorular gelmeye başlar.
 
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    checkAnswer(button1,english); //Cevabın doğru olup olmadığını kontrol eden method. Sonunda ilgili db işlemlerini yapar ve getQuestion'u tekrar çağırır.
+                    checkAnswer(button1,english); //Cevabı kontrol eder ve getQuestion() metodunu tekrar çalıştırır.
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -70,10 +70,10 @@ public class WordQuiz extends JFrame{
             }
         });
 
-        backMainMenu.addActionListener(new ActionListener() {
+        backMainMenu.addActionListener(new ActionListener() { //Ana menüye dön tuşu
             @Override
             public void actionPerformed(ActionEvent e) {
-                WordQuiz.this.setVisible(false);
+                MistakesWordQuiz.this.setVisible(false);
                 MainMenu mainMenu  = null;
                 mainMenu = new MainMenu();
                 mainMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,7 +86,7 @@ public class WordQuiz extends JFrame{
 
     private void getQuestion() throws SQLException{
         SelectQuery selectQuery = new SelectQuery();
-        selectQuery.selectQuesiton();
+        selectQuery.selectQuesitonFromMistakes();
         turkish = selectQuery.getTurkish();
         english = selectQuery.getEnglish();
 
@@ -111,23 +111,21 @@ public class WordQuiz extends JFrame{
         }
     }
 
-    private void checkAnswer(JButton selectedButton, String correctAnswer) throws SQLException {
-        if (selectedButton.getText().equals(correctAnswer)){ //Seçilen buton doğru cevaba yani english değişkenine eş mi?
+    private void checkAnswer(JButton selectedButton, String correctAnswer) throws SQLException { //Cevabın doğruluğunu kontrol eden fonksiyon
+        if (selectedButton.getText().equals(correctAnswer)){
             statementLabel.setText("Doğru cevap");
-            streak+=1; //Doğru yapılan her soru için seri 1 arttırılır. (High score mantığında tekrar db'li bir işlem yapılabilir)
+            streak+=1;
             streakLabel.setText("Art arda Doğru sayısı: " + streak);
             SelectQuery selectQuery = new SelectQuery();
-            selectQuery.insertQueryToCorrectTable(turkish, correctAnswer); //Doğru işaretlendiğinde satırın ilgili db'e eklenmesi
-            selectQuery.deleteQuery(english); //Doğru bilinen satırın ana tablodan çıkarılması.
+            selectQuery.insertQueryToCorrectTable(turkish, correctAnswer); //Doğru bilindiğinde ilgili satır doğrular listesine gider.
+            selectQuery.deleteQueryFromIncorrectTable(english); //Ve mevcut tablodan çıkarılır ki tekrar gözükmesin.
             getQuestion();
         }else{
             statementLabel.setText("Yanlış cevap! Doğrusu => " + correctAnswer);
             lastStreak.setText("Son seri sayısı: " + streak);
-            streak=0; //Yanlış bilindiğinde seri sıfırlanır.
+            streak=0;
             streakLabel.setText(String.valueOf(streak));
-            SelectQuery selectQuery = new SelectQuery();
-            selectQuery.insertQueryToInCorrectTable(turkish,correctAnswer); //Yanlış bilinen satırı yanlışlar listesine eklemek
-            getQuestion();
+            getQuestion(); //Yanlış bilindiğinde herhangi bir eksiltme olmaz ve sorular tekrar gelmeye başlar. Değişen tek şey anlık streak miktarı olur.
         }
     }
 }
