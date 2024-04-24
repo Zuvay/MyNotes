@@ -1,6 +1,6 @@
 public class NotBir {
     public static void main(String[] args) {
-        //Stack-Heap mantığı
+        //Stack-Heap mantığı.
         //referance type ve value type farkı
 
         int sayi_a = 10;
