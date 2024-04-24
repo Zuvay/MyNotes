@@ -12,7 +12,7 @@ public class Main {
     int carpilmis = dortIslem.Carp(3, 4,5,6); //3*4*5*6 = 360
     System.out.println(carpilmis);
 
-    int bolunmus = dortIslem.Bol(30,2,5,3); // 30/2/5/3 = 1 (0 kullanılcak kod yazılmadı)
+    int bolunmus = dortIslem.Bol(30,2,5,3); //30/2/5/3 = 1 (0 kullanılcak kod yazılmadı)
     System.out.println(bolunmus);
 
   }
