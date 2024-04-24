@@ -11,7 +11,7 @@ public class NotBir {
         /*AÇIKLAMA:
          * Değer sayıları (value type) stack içerisinde değerlenir. sayi b'yi a ile eşitlediğimizde 
          * sayi b'nin yeni değeri 10 olarak değiştirildi ve öyle kaldı sonrasında a sayısını değiştirdiğimizde
-         * b sayısı da değişmedi.
+         * b sayısı da değişmedi
          */
 
         
