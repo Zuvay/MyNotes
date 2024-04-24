@@ -2,10 +2,10 @@ Inheritance:
 Bir üst class (superclass) bir de bu class'dan doğmuş bir alt class var(subclass). Subclass superclass'ın metotlarına fln erişebiliyor. Subclass için bir nesne oluşturmak superclass'a erişmek için yeterli. Bu noktada superclass'taki metotlar için prive ön şeysi kullanılabilir. Superclass a erişmek için (extends) kullanılır.
 
 Polymorphism:
-Bir superclasstan birden çok subclass ürettiğinde de polymorphism oluyo sanırım. tam olarak aynı şeyler.
+Bir superclasstan birden çok subclass ürettiğinde de polymorphism oluyo sanırım. tam olarak aynı şeyler
 
 Inner Class:
-Bir class'ın içinde başka bir class açmak. inherit gibi değil. Nesne oluşturma kısmı biraz daha farklı ona bakarsın.
+Bir class'ın içinde başka bir class açmak. inherit gibi değil. Nesne oluşturma kısmı biraz daha farklı ona bakarsın
 
 Abstract Class:
 class oluştururken önüne abstract yazılarak oluşturuluyo. Bu class'a doğrudan erişemiyosun. Bi subclass açıp bu class'a inherit ediceksin. Ondan sonra subclass için nesne oluşturduğunda bu superclass'a(yani abstract class'a) erişebiliyosun. aynı şekilde abstract metotlar da oluşturabiliyon.
