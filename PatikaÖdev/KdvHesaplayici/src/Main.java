@@ -1,7 +1,4 @@
 import java.util.Scanner;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -13,7 +10,7 @@ public class Main {
             newPrice = price +(price * KDV);
             System.out.println("%18 KDV'li fiyatı " + newPrice);
         }else{
-            newPrice = price + (price * (0.8));
+            newPrice = price + (price * (0.08));
             System.out.println("%8 KDV'li fiyatı " + newPrice);
         }
     }
