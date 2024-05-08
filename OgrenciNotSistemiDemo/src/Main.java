@@ -27,7 +27,7 @@ public class Main {
         mahmut.addExamNote(69,86,68);
         mahmut.isPass();
 
-        System.out.println("****************");
+        System.out.println("***************");
 
         fizik.printTeacher();
         kimya.printTeacher();
